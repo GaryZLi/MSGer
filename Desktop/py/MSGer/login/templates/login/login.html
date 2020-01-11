@@ -1,0 +1,99 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <title>Login</title>
+        {% load static %}
+        <link rel='stylesheet' type='text/css' href="{% static 'css/style.css' %}" />
+    </head>
+    
+    <body>
+        <div class='login-container'>
+            <div class='login-side'>
+                <div style="height: 15%">
+                </div>
+                <div class="login-logo">
+                    <div class='login-text'>
+                        Login
+                    </div>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    {{text}}
+                    {{errors}}
+                    {{valid}}
+                    <!-- <div class='login-form-container'>
+                        <div class="login-fields">
+                            <label for="login_username">
+                                Username
+                                {{errors}}
+                                {{valid}}
+                            </label>
+                            <input id="login_username" type="text" name="username" required>
+                        </div>
+                        <div class="login-fields">
+                            <label for="login_password">
+                                Password
+                                {{errors}}
+                                {{valid}}
+                            </label>
+                            <input id="login_password" type="text" name="password">
+                        </div>
+                        <div style="display: flex;">
+                            <div style="width: 50%; text-align: right">
+                                <input type="submit" value="Enter">
+                            </div>
+                            {% if dontMAtch %}
+                                <div class="error-X" style="margin-left: 10px;">
+                                </div>
+                            {% endif %}
+                        </div> -->
+                    </div>
+                </form>
+            </div>
+            <!-- <div class='signup-side'>
+                <div class='signup-bar'>
+                    <div class='signup-text'>
+                        Sign Up
+                    </div>
+                </div>
+                <div class='signup-context'>
+                    <form action="" method="POST">
+                        <div class="signup-fields" style="padding-top: 30px;">
+                            <label>
+                                Email
+                            </label>
+                            <input id="signupEmail" type="text" name="email">
+                        </div>
+                        <div class="signup-fields"> 
+                            <label>
+                                Username
+                            </label>
+                            <input id="signupUsername" type="text" name="username">
+                        </div>
+                        <div class="signup-fields"> 
+                            <label>
+                                Password
+                            </label>
+                            <input id="signupPassword" type="text" name="password">
+                        </div>
+                        <div class="signup-fields"> 
+                            <label>
+                                Re-enter
+                            </label>
+                            <input id="reenterPassword" type="text" name="password">
+                        </div>
+                        <div style="margin-left: 90px; display: flex;">
+                            <input type="submit" value="Take Me!">
+                            {% if incorrect %}
+                                <div style="color: red; border-style: solid; margin-left: 5px; border-color: black; border-width: 1px; padding-left: 1px; padding-right: 1px;">
+                                    You are taken!
+                                </div>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div> -->
+            </div>
+        </div>
+    </body>
+</html>
